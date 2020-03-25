@@ -5,18 +5,7 @@ routes.get("/", (request, response) => {
     
     return response.json({
         evento: 'Semana OmniStack 11',
-        aluna: 'Fernanda'
+        projeto: 'Aplicação Be The Hero'
     });
 });
-
-routes.post("/users", (request, response) => {
-    const body = request.body;
-    console.log(body);
-
-    return response.json({
-        evento: 'Semana OmniStack 11',
-        aluna: 'Fernanda'
-    });
-});
-
 module.exports = routes;
