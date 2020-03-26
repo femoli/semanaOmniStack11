@@ -3,11 +3,9 @@ const crypto = require("crypto");
 const connection = require("./database/connection");
 const routes = express.Router();
 
-routes.get("/", (request, response) => {
-    return response.json({
-        evento: 'Semana OmniStack 11',
-        projeto: 'Aplicação Be The Hero'
-    });
+routes.get("/ongs", async (request, response) => {
+    const listarTodasAsOngs = await connection("ongs").select("*");
+    return response.json(listarTodasAsOngs);
 });
 
 routes.post("/ongs", async (request, response) => {
