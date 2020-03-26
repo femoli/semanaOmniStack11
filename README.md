@@ -3,15 +3,29 @@ Desenvolvimento de uma aplicação para conectar pessoas à Ongs.
 
 Projeto da Semana OmniStack da RocketSeat. 
 
-**Tecnologias**: Node.js && mongoDB && ReactJS && React Native;
+**Tecnologias**: node && sqlite && reactjs && react native;
 
 ## Dia 1: Instalação das dependências
 
-- [x] Node 12.14.1 no [Debian/Ubuntu](https://github.com/nodesource/distributions#installation-instructions)
+- [x] node && npm 6.13.4 no [Debian/Ubuntu](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+Versões utilizadas: npm 6.13.4, node 12.14.1
 
 ## Dia 2: Backend 
 ### Criando a base da aplicação
-- [x] SAVE THE DATE
+#### Rotas
+    localhost:3033/ongs
+    localhost:3033/incidentes/   
+    localhost:3033/incidentes/7
+
+#### Funcionalidades
+- [ ] Login da ONG
+- [ ] Logout da ONG
+- [x] Cadastrar ONG
+- [x] Cadastrar Incidentes
+- [x] Deletar Incidentes
+- [ ] Listar incidentes por ONG
+- [ ] Entrar em contato com uma ONG
 
 ## Dia 3: Frontend
 ### Construindo a interface web
