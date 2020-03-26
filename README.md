@@ -13,10 +13,28 @@ Versões utilizadas: npm 6.13.4, node 12.14.1
 
 ## Dia 2: Backend 
 ### Criando a base da aplicação
-#### Rotas
-    localhost:3033/ongs
-    localhost:3033/incidentes/   
-    localhost:3033/incidentes/7
+#### Rotas GET 
+localhost:3033/ongs 
+
+Lista todos as ongs cadastradas
+    
+localhost:3033/incidentes
+
+Lista todos os incidentes cadastrados
+
+#### Rotas POST 
+localhost:3033/ongs/
+
+Cadastra uma ong
+
+localhost:3033/incidentes/
+
+Cadastra um incidente
+
+#### Rotas DELETE 
+localhost:3033/incidentes/id
+
+Deleta um incidente pelo id
 
 #### Funcionalidades
 - [ ] Login da ONG
