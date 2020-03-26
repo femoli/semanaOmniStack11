@@ -31,7 +31,6 @@ module.exports = {
         if (deletarIncidentePeloId.ong_id != ong_id) {
             return response.sendStatus(401)
         }
-
         await connection("incidentes").where("id", id).delete();
         return response.status(200).send("Incidente deletado");
     },
