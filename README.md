@@ -16,27 +16,25 @@ Versões utilizadas: npm 6.13.4,  node 12.14.1
 - [x] Configurar banco de dados
 SQL Query Builder - [Knex] (http://knexjs.org/)
 
-- [x] Instalar o Knex e o sqlite:
-
-    npm install knex
-    npm install sqlite3
-
-- [x] Conectar ao database:
-
-    npx knex init
-
-- [x] Criar tabela ongs && incidentes:
-
-    npx knex migrate: make create_ongs
-    npx knex migrate:latest
-
-    npx knex migrate: make create_incidentes
-    npx knex migrate:latest
-
+**Instalar o Knex e o sqlite:**
+``` 
+npm install knex     
+npm install sqlite3
+```    
+**Conectar ao database:**
+```    
+npx knex init
+```
+**Criar tabela ongs && incidentes:**
+```
+npx knex migrate: make create_ongs
+npx knex migrate:latest
+    
+npx knex migrate: make create_incidentes
+npx knex migrate:latest
+```
 - [x] Contruir CRUD
 - [x] Adicionar módulo CORS
-
-
 
 #### Funcionalidades
 - [x] Login da ONG
@@ -48,21 +46,28 @@ SQL Query Builder - [Knex] (http://knexjs.org/)
 - [ ] Entrar em contato com uma ONG
 
 #### Rotas GET 
-    localhost:3033/perfil - *Exibe perfil e incidentes da ONG*
-    
-    localhost:3033/ongs - *Lista todas as ONGs cadastradas*
+Exibe perfil e incidentes da ONG  
+`localhost:3033/perfil`  
 
-    localhost:3033/incidentes - *Lista todos os incidentes cadastrados*
+Lista todas as ONGs cadastradas  
+`localhost:3033/ongs`  
+
+Lista todos os incidentes cadastrados  
+`localhost:3033/incidentes` 
 
 #### Rotas POST 
-    localhost:3033/ongs - *Cadastra uma ONG*
+Cadastra uma ONG  
+`localhost:3033/ongs`
 
-    localhost:3033/login - *Login de uma ONG*
+Login de uma ONG  
+`localhost:3033/login`
 
-    localhost:3033/incidentes/ - *Cadastra um incidente*
+Cadastra um incidente  
+`localhost:3033/incidentes/`    
 
 #### Rotas DELETE 
-    localhost:3033/incidentes/id - *Deleta um incidente pelo id*
+Deleta um incidente pelo id  
+`localhost:3033/incidentes/id`
 
 ## Dia 3: Frontend
 ### Construindo a interface web
