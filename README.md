@@ -38,12 +38,10 @@ npx knex migrate:latest
 
 #### Funcionalidades
 - [x] Login da ONG
-- [ ] Logout da ONG
 - [x] Cadastrar ONG
 - [x] Cadastrar Incidentes
 - [x] Deletar Incidentes
 - [x] Listar incidentes por ONG
-- [ ] Entrar em contato com uma ONG
 
 #### Rotas GET 
 Exibe perfil e incidentes da ONG  
@@ -71,7 +69,14 @@ Deleta um incidente pelo id
 
 ## Dia 3: Frontend
 ### Construindo a interface web
-- [x] SAVE THE DATE
+- [ ] Página de login da ONG
+- [ ] Configurando rotas
+- [ ] Cadastro de ONG
+- [ ] Cadastro de incidentes
+- [ ] Listagem de incidentes
+- [ ] Logout da ONG
+- [ ] Entrar em contato com uma ONG
+- [ ] Conectar aplicação a API
 
 ## Dia 4: Mobile
 ### Desenvolvendo o app mobile
