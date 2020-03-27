@@ -8,7 +8,7 @@ module.exports = {
         const [count] = await connection("incidentes").count();
         console.log(count);
 
-        //lista todos os casos, delimitando 5 por pagina
+        //lista todos de incidentes, delimitando 5 por pagina
         const listarTodosOsIncidentes = await connection("incidentes")
 
             //relaciona incidente && ong(id)
