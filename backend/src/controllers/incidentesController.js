@@ -2,7 +2,11 @@ const connection = require("../database/connection");
 
 module.exports = {
     async index(request, response) {
-        const listarTodosOsIncidentes = await connection("incidentes").select("*");
+        const { page = 1 } = request.query;
+        const listarTodosOsIncidentes = await connection("incidentes")
+            .limit(5)
+            .offset((page - 1) * 5)
+            .select("*");
         return response.json(listarTodosOsIncidentes);
     },
 
