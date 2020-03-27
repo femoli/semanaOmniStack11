@@ -10,10 +10,23 @@ module.exports = {
 
         //lista todos os casos, delimitando 5 por pagina
         const listarTodosOsIncidentes = await connection("incidentes")
+
+            //relaciona incidente && ong(id)
+            .join("ongs", "ongs.id", "=", "incidentes.ong_id")
             .limit(5)
             .offset((page - 1) * 5)
-            .select("*");
-        //exibe o total de itens no header    
+
+            //para os ids não se sobreporem
+            .select([
+                "incidentes.*",
+                "ongs.name",
+                "ongs.email",
+                "ongs.whatsapp",
+                "ongs.city",
+                "ongs.uf"
+            ]);
+
+        //exibe o total de incidentes no header    
         response.header("X-Total-Count", count["count(*)"]);
         return response.json(listarTodosOsIncidentes);
     },
