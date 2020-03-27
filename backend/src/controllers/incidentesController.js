@@ -3,10 +3,18 @@ const connection = require("../database/connection");
 module.exports = {
     async index(request, response) {
         const { page = 1 } = request.query;
+
+        //exibe numero total de incidentes 
+        const [count] = await connection("incidentes").count();
+        console.log(count);
+
+        //lista todos os casos, delimitando 5 por pagina
         const listarTodosOsIncidentes = await connection("incidentes")
             .limit(5)
             .offset((page - 1) * 5)
             .select("*");
+        //exibe o total de itens no header    
+        response.header("X-Total-Count", count["count(*)"]);
         return response.json(listarTodosOsIncidentes);
     },
 
