@@ -4,7 +4,21 @@ const connection = require("../database/connection");
 module.exports = {
 
     async index(request, response) {
-        const listarTodasAsOngs = await connection("ongs").select("*");
+        const { page = 1 } = request.query;
+
+        //exibe numero total de ongs 
+        const [count] = await connection("ongs").count();
+        console.log(count);
+
+        //lista todas as ongs, delimitando 5 por pagina
+        const listarTodasAsOngs = await connection("ongs")
+
+            .limit(5)
+            .offset((page - 1) * 5)
+            .select("*");
+
+        //exibe o total de incidentes no header
+        response.header("X-Total-Count", count["count(*)"]);
         return response.json(listarTodasAsOngs);
     },
 
